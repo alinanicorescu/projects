@@ -2,7 +2,7 @@
 
      --------------------------------------
 
-                    A repository created for small projects to test cool technologies 
+     A repository created for small projects to test cool technologies 
      
      -------------------------------------
 
