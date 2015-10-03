@@ -3,5 +3,7 @@ https://en.wikipedia.org/wiki/Skybox_(video_games)
 
 This small project is an example of a skybox effect using OpenGLES3 skybox implementation and UIKit multiple touch events.
 
--free textures downloaded from different sites)
--can improve : rotation vector, camera positioning, gyroscope events handling, considering gesture velocity, zoom);
+- uses free textures downloaded from different sites.
+
+
+- can improve : rotation vector, camera positioning, gyroscope events handling, considering gesture velocity, zoom;
