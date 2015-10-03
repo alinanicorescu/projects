@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Sky Box View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SkyBoxViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GLKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QPo-wf-dVX" appends="YES" id="SX7-7F-roX"/>
+                            <outletCollection property="gestureRecognizers" destination="SbZ-Nx-LSA" appends="YES" id="U6K-gJ-BtN"/>
+                            <outletCollection property="gestureRecognizers" destination="MTk-Ym-nor" appends="YES" id="Xgn-Lg-WfZ"/>
+                            <outletCollection property="gestureRecognizers" destination="3C1-TF-UEm" appends="YES" id="TU8-Ja-ziZ"/>
+                            <outletCollection property="gestureRecognizers" destination="dH0-or-wwi" appends="YES" id="bHY-Qz-qgK"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="QPo-wf-dVX">
+                    <connections>
+                        <action selector="handleRotation:" destination="BYZ-38-t0r" id="GpX-TD-LEd"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="SbZ-Nx-LSA">
+                    <connections>
+                        <action selector="handleSwipeRight:" destination="BYZ-38-t0r" id="Iqo-Qf-BsA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="MTk-Ym-nor">
+                    <connections>
+                        <action selector="handleSwipeLeft:" destination="BYZ-38-t0r" id="Dvn-T0-X0G"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="3C1-TF-UEm">
+                    <connections>
+                        <action selector="handleSwipeUp:" destination="BYZ-38-t0r" id="BlP-S2-hUQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="dH0-or-wwi">
+                    <connections>
+                        <action selector="handleSwipeDown:" destination="BYZ-38-t0r" id="Te5-Fc-O6p"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="622" y="341"/>
+        </scene>
+    </scenes>
+</document>

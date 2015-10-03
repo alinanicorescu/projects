@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F293B38C1BC076D80082CE02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F293B38B1BC076D80082CE02 /* main.m */; };
+		F293B3971BC076D80082CE02 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F293B3961BC076D80082CE02 /* Images.xcassets */; };
+		F293B39A1BC076D80082CE02 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F293B3981BC076D80082CE02 /* LaunchScreen.xib */; };
+		F293B3A61BC076D80082CE02 /* SkyBoxExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F293B3A51BC076D80082CE02 /* SkyBoxExampleTests.m */; };
+		F293B3B01BC076EB0082CE02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3AF1BC076EB0082CE02 /* QuartzCore.framework */; };
+		F293B3B21BC076F30082CE02 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3B11BC076F30082CE02 /* GLKit.framework */; };
+		F293B3B41BC076FB0082CE02 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B3B31BC076FB0082CE02 /* OpenGLES.framework */; };
+		F293B3BD1BC078EE0082CE02 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F293B3B61BC078EE0082CE02 /* AppDelegate.m */; };
+		F293B3BE1BC078EE0082CE02 /* Cloudy in Resources */ = {isa = PBXBuildFile; fileRef = F293B3B71BC078EE0082CE02 /* Cloudy */; };
+		F293B3BF1BC078EE0082CE02 /* Miracle in Resources */ = {isa = PBXBuildFile; fileRef = F293B3B81BC078EE0082CE02 /* Miracle */; };
+		F293B3C01BC078EE0082CE02 /* SkyBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F293B3BB1BC078EE0082CE02 /* SkyBoxViewController.m */; };
+		F293B3C11BC078EE0082CE02 /* Tropical in Resources */ = {isa = PBXBuildFile; fileRef = F293B3BC1BC078EE0082CE02 /* Tropical */; };
+		F293B3C51BC079940082CE02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F293B3C41BC079940082CE02 /* Main.storyboard */; };
+		F293B3C71BC079EC0082CE02 /* SceneParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = F293B3C61BC079EC0082CE02 /* SceneParameters.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F293B3A01BC076D80082CE02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F293B37E1BC076D70082CE02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F293B3851BC076D70082CE02;
+			remoteInfo = SkyBoxExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F293B3861BC076D80082CE02 /* SkyBoxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyBoxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F293B38A1BC076D80082CE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F293B38B1BC076D80082CE02 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F293B3961BC076D80082CE02 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F293B3991BC076D80082CE02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F293B39F1BC076D80082CE02 /* SkyBoxExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyBoxExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F293B3A41BC076D80082CE02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F293B3A51BC076D80082CE02 /* SkyBoxExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyBoxExampleTests.m; sourceTree = "<group>"; };
+		F293B3AF1BC076EB0082CE02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F293B3B11BC076F30082CE02 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F293B3B31BC076FB0082CE02 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F293B3B51BC078EE0082CE02 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F293B3B61BC078EE0082CE02 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F293B3B71BC078EE0082CE02 /* Cloudy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cloudy; sourceTree = "<group>"; };
+		F293B3B81BC078EE0082CE02 /* Miracle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Miracle; sourceTree = "<group>"; };
+		F293B3B91BC078EE0082CE02 /* SceneParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneParameters.h; sourceTree = "<group>"; };
+		F293B3BA1BC078EE0082CE02 /* SkyBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkyBoxViewController.h; sourceTree = "<group>"; };
+		F293B3BB1BC078EE0082CE02 /* SkyBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkyBoxViewController.m; sourceTree = "<group>"; };
+		F293B3BC1BC078EE0082CE02 /* Tropical */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tropical; sourceTree = "<group>"; };
+		F293B3C41BC079940082CE02 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F293B3C61BC079EC0082CE02 /* SceneParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneParameters.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F293B3831BC076D70082CE02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F293B3B41BC076FB0082CE02 /* OpenGLES.framework in Frameworks */,
+				F293B3B21BC076F30082CE02 /* GLKit.framework in Frameworks */,
+				F293B3B01BC076EB0082CE02 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F293B39C1BC076D80082CE02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F293B37D1BC076D70082CE02 = {
+			isa = PBXGroup;
+			children = (
+				F293B3B31BC076FB0082CE02 /* OpenGLES.framework */,
+				F293B3B11BC076F30082CE02 /* GLKit.framework */,
+				F293B3AF1BC076EB0082CE02 /* QuartzCore.framework */,
+				F293B3881BC076D80082CE02 /* SkyBoxExample */,
+				F293B3A21BC076D80082CE02 /* SkyBoxExampleTests */,
+				F293B3871BC076D80082CE02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F293B3871BC076D80082CE02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F293B3861BC076D80082CE02 /* SkyBoxExample.app */,
+				F293B39F1BC076D80082CE02 /* SkyBoxExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F293B3881BC076D80082CE02 /* SkyBoxExample */ = {
+			isa = PBXGroup;
+			children = (
+				F293B3C61BC079EC0082CE02 /* SceneParameters.m */,
+				F293B3C41BC079940082CE02 /* Main.storyboard */,
+				F293B3B51BC078EE0082CE02 /* AppDelegate.h */,
+				F293B3B61BC078EE0082CE02 /* AppDelegate.m */,
+				F293B3B71BC078EE0082CE02 /* Cloudy */,
+				F293B3B81BC078EE0082CE02 /* Miracle */,
+				F293B3B91BC078EE0082CE02 /* SceneParameters.h */,
+				F293B3BA1BC078EE0082CE02 /* SkyBoxViewController.h */,
+				F293B3BB1BC078EE0082CE02 /* SkyBoxViewController.m */,
+				F293B3BC1BC078EE0082CE02 /* Tropical */,
+				F293B3961BC076D80082CE02 /* Images.xcassets */,
+				F293B3981BC076D80082CE02 /* LaunchScreen.xib */,
+				F293B3891BC076D80082CE02 /* Supporting Files */,
+			);
+			path = SkyBoxExample;
+			sourceTree = "<group>";
+		};
+		F293B3891BC076D80082CE02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F293B38A1BC076D80082CE02 /* Info.plist */,
+				F293B38B1BC076D80082CE02 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F293B3A21BC076D80082CE02 /* SkyBoxExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				F293B3A51BC076D80082CE02 /* SkyBoxExampleTests.m */,
+				F293B3A31BC076D80082CE02 /* Supporting Files */,
+			);
+			path = SkyBoxExampleTests;
+			sourceTree = "<group>";
+		};
+		F293B3A31BC076D80082CE02 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F293B3A41BC076D80082CE02 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F293B3851BC076D70082CE02 /* SkyBoxExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F293B3A91BC076D80082CE02 /* Build configuration list for PBXNativeTarget "SkyBoxExample" */;
+			buildPhases = (
+				F293B3821BC076D70082CE02 /* Sources */,
+				F293B3831BC076D70082CE02 /* Frameworks */,
+				F293B3841BC076D70082CE02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyBoxExample;
+			productName = SkyBoxExample;
+			productReference = F293B3861BC076D80082CE02 /* SkyBoxExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F293B39E1BC076D80082CE02 /* SkyBoxExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F293B3AC1BC076D80082CE02 /* Build configuration list for PBXNativeTarget "SkyBoxExampleTests" */;
+			buildPhases = (
+				F293B39B1BC076D80082CE02 /* Sources */,
+				F293B39C1BC076D80082CE02 /* Frameworks */,
+				F293B39D1BC076D80082CE02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F293B3A11BC076D80082CE02 /* PBXTargetDependency */,
+			);
+			name = SkyBoxExampleTests;
+			productName = SkyBoxExampleTests;
+			productReference = F293B39F1BC076D80082CE02 /* SkyBoxExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F293B37E1BC076D70082CE02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Alina Nicorescu";
+				TargetAttributes = {
+					F293B3851BC076D70082CE02 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F293B39E1BC076D80082CE02 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F293B3851BC076D70082CE02;
+					};
+				};
+			};
+			buildConfigurationList = F293B3811BC076D70082CE02 /* Build configuration list for PBXProject "SkyBoxExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F293B37D1BC076D70082CE02;
+			productRefGroup = F293B3871BC076D80082CE02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F293B3851BC076D70082CE02 /* SkyBoxExample */,
+				F293B39E1BC076D80082CE02 /* SkyBoxExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F293B3841BC076D70082CE02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F293B3C11BC078EE0082CE02 /* Tropical in Resources */,
+				F293B3BF1BC078EE0082CE02 /* Miracle in Resources */,
+				F293B39A1BC076D80082CE02 /* LaunchScreen.xib in Resources */,
+				F293B3C51BC079940082CE02 /* Main.storyboard in Resources */,
+				F293B3BE1BC078EE0082CE02 /* Cloudy in Resources */,
+				F293B3971BC076D80082CE02 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F293B39D1BC076D80082CE02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F293B3821BC076D70082CE02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F293B3C01BC078EE0082CE02 /* SkyBoxViewController.m in Sources */,
+				F293B3BD1BC078EE0082CE02 /* AppDelegate.m in Sources */,
+				F293B3C71BC079EC0082CE02 /* SceneParameters.m in Sources */,
+				F293B38C1BC076D80082CE02 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F293B39B1BC076D80082CE02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F293B3A61BC076D80082CE02 /* SkyBoxExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F293B3A11BC076D80082CE02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F293B3851BC076D70082CE02 /* SkyBoxExample */;
+			targetProxy = F293B3A01BC076D80082CE02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F293B3981BC076D80082CE02 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F293B3991BC076D80082CE02 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F293B3A71BC076D80082CE02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F293B3A81BC076D80082CE02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F293B3AA1BC076D80082CE02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkyBoxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F293B3AB1BC076D80082CE02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SkyBoxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F293B3AD1BC076D80082CE02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SkyBoxExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyBoxExample.app/SkyBoxExample";
+			};
+			name = Debug;
+		};
+		F293B3AE1BC076D80082CE02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SkyBoxExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyBoxExample.app/SkyBoxExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F293B3811BC076D70082CE02 /* Build configuration list for PBXProject "SkyBoxExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F293B3A71BC076D80082CE02 /* Debug */,
+				F293B3A81BC076D80082CE02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F293B3A91BC076D80082CE02 /* Build configuration list for PBXNativeTarget "SkyBoxExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F293B3AA1BC076D80082CE02 /* Debug */,
+				F293B3AB1BC076D80082CE02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F293B3AC1BC076D80082CE02 /* Build configuration list for PBXNativeTarget "SkyBoxExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F293B3AD1BC076D80082CE02 /* Debug */,
+				F293B3AE1BC076D80082CE02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F293B37E1BC076D70082CE02 /* Project object */;
+}
