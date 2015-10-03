@@ -5,4 +5,3 @@ This small project is an example of a skybox effect using OpenGLES3 skybox imple
 
 - can improve : rotation vector, camera positioning, gyroscope events handling, considering gesture velocity, zoom;
 
-(uses free textures downloaded from different sites)
