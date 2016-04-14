@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "New to-do item"; ObjectID = "Gxf-8M-Ny6"; */
+"Gxf-8M-Ny6.placeholder" = "New to-do item";
+
+/* Class = "UINavigationItem"; title = "Add To-Do Item"; ObjectID = "IfW-nc-eWT"; */
+"IfW-nc-eWT.title" = "Add To-Do Item";
+
+/* Class = "UILabel"; text = "Mow the lawn"; ObjectID = "Lsi-G5-p2i"; */
+"Lsi-G5-p2i.text" = "Mow the lawn";
+
+/* Class = "UINavigationItem"; title = "To-Do List"; ObjectID = "eVd-xP-sdi"; */
+"eVd-xP-sdi.title" = "To-Do List";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "tSE-rF-9Qs"; */
+"tSE-rF-9Qs.title" = "Save";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "zW4-ia-zMl"; */
+"zW4-ia-zMl.title" = "Cancel";
