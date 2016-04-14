@@ -3,12 +3,12 @@ package recommendations.music;
 /**
  * Created by alinanicorescu on 10/10/15.
  */
-public class UserRecommendation implements Comparable<UserRecommendation> {
+public class UserScore implements Comparable<UserScore> {
 
     private String user;
     private double score;
 
-    public UserRecommendation(String user, double score) {
+    public UserScore(String user, double score) {
         this.user = user;
         this.score = score;
     }
@@ -22,7 +22,7 @@ public class UserRecommendation implements Comparable<UserRecommendation> {
     }
 
     @Override
-    public int compareTo(UserRecommendation o) {
+    public int compareTo(UserScore o) {
         if (this.getUser().equals(o.getUser())) {
             return 0;
         } else {
@@ -33,9 +33,9 @@ public class UserRecommendation implements Comparable<UserRecommendation> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof UserRecommendation)) return false;
+        if (!(o instanceof UserScore)) return false;
 
-        UserRecommendation that = (UserRecommendation) o;
+        UserScore that = (UserScore) o;
 
         return getUser().equals(that.getUser());
 
@@ -48,7 +48,7 @@ public class UserRecommendation implements Comparable<UserRecommendation> {
 
     @Override
     public String toString() {
-        return "recommendations.music.UserRecommendation{" +
+        return "recommendations.music.UserScore{" +
                 "user='" + user + '\'' +
                 ", score=" + score +
                 '}';

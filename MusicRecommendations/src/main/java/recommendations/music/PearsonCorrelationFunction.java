@@ -4,13 +4,11 @@ import java.util.*;
 
 /**
  * Created by alinanicorescu on 10/10/15.
- *
- * Pearson correlation function implementation
  */
-public class PearsonCorrelation implements CorrelationFunction {
+public class PearsonCorrelationFunction implements CorrelationFunction {
 
 
-    public double computePearsonCorrelation(UserSongListings userSongListings1, UserSongListings userSongListings2) {
+    public double computeCorrelationScore(UserSongListings userSongListings1, UserSongListings userSongListings2) {
 
         Map<String, Double> userSongListenCounts1 = userSongListings1.getUserSongListenCounts() ;
 
