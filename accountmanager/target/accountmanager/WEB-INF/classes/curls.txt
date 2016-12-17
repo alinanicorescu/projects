@@ -1,0 +1,10 @@
+
+
+
+curl -i -H "Content-type: application/json" -H "Accept: application/json" -X POST -d '{"email":"alina.nicorescu@gmail.com",
+"username":"anicorescu"}' http://localhost:8080/accountmanager/rest/users/register
+
+
+curl -i -H "Content-type: application/json" -H "Accept: application/json" -X POST -d '{"email":"alina.nicorescu@gmail.com",
+"username":"anicorescu"}' http://localhost:8080/accountmanager/rest/users/register
+

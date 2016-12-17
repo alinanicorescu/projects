@@ -1,0 +1,25 @@
+
+
+
+curl -i -H "Content-type: application/json" -H "Accept: application/json" -X POST -d '{"email":"alina.nicorescu@gmail.com",
+"username":"anicorescu"}' http://localhost:8080/accountmanager/rest/users/register
+
+
+
+curl -i -X POST -d "email=test.user" -d "username=batman" http://localhost:7878/users/register -H "Content-type: application/x-www-form-urlencoded"
+
+curl -i  http://localhost:7878/account/test.user -H "Accept: application/json"
+
+
+curl -i -X POST -d "email=test.user" -d "accountCode=xcsdd" http://localhost:7878/account/deposit -H "Content-type: application/x-www-form-urlencoded"
+
+
+curl -i  -X POST -d "email=test.user" -d "from=xcsdd" -d "to=xcsdd" http://localhost:7878/account/transfer -H "Content-type: application/x-www-form-urlencoded"
+
+
+curl -i  http://localhost:7878/account/test.user4?accountCode=batman4abc  -H "Accept: application/json"
+
+
+curl -i -X POST -d "email=test.user4" -d "accountCode=batman4abc" -d "amount=20.4" http://localhost:7878/account/deposit -H "Content-type: application/x-www-form-urlencoded"
+
+curl -i  -X POST -d "email=test.user4" -d "from=batman4abc" -d "to=batmanalternative4" -d "amount=5" http://localhost:7878/account/transfer -H "Content-type: application/x-www-form-urlencoded"
