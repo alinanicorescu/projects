@@ -1,6 +1,11 @@
 package com.voya.example.accountmanager.dao;
 
 import com.voya.example.accountmanager.model.AccountBalance;
+import com.voya.example.accountmanager.model.AccountDeposit;
+import com.voya.example.accountmanager.model.AccountTransfer;
+import com.voya.example.accountmanager.model.UserDetails;
+import com.voya.example.accountmanager.model.exception.DataValidationException;
+import org.springframework.dao.DataAccessException;
 
 import java.math.BigDecimal;
 
@@ -9,13 +14,12 @@ import java.math.BigDecimal;
  */
 public interface AcccountManagerDao {
 
-    public int selectItems();
 
-    void registerUser(String email, String userName);
+    void registerUser(UserDetails userDetails) throws DataAccessException;
 
-    AccountBalance getAccountBalance(String email, String accountCode);
+    AccountBalance getAccountBalance(String email, String accountCode) throws DataAccessException;
 
-    int deposit(String email, String accountCode, BigDecimal amount);
+    int deposit(AccountDeposit deposit) throws DataValidationException, DataAccessException;
 
-    int transfer(String email, String fromAccount, String toAccount, BigDecimal amount);
+    void transfer(AccountTransfer accountTransfer) throws DataValidationException, DataAccessException;
 }

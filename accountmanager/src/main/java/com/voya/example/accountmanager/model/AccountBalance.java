@@ -1,25 +1,29 @@
 package com.voya.example.accountmanager.model;
 
-
 import java.math.BigDecimal;
 
 /**
- * Created by alinanicorescu on 17/12/2016.
+ * Created by alinanicorescu on 18/12/2016.
  */
 public class AccountBalance {
 
-    private BigDecimal amount;
+    private BigDecimal balance;
+    private String accountCode;
 
-    public AccountBalance() {
-
+    public String getAccountCode() {
+        return accountCode;
     }
 
-    public BigDecimal getAmount() {
-        return amount;
+    public void setAccountCode(String accountCode) {
+        this.accountCode = accountCode;
     }
 
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
+    public BigDecimal getBalance() {
+        return balance;
+    }
+
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
 }

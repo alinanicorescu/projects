@@ -2,11 +2,17 @@ package com.voya.example.accountmanager.rest;
 
 import com.voya.example.accountmanager.dao.AcccountManagerDao;
 import com.voya.example.accountmanager.model.AccountBalance;
+import com.voya.example.accountmanager.model.AccountDeposit;
+import com.voya.example.accountmanager.model.AccountTransfer;
+import com.voya.example.accountmanager.model.exception.DataValidationException;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.ws.rs.*;
+import javax.ws.rs.client.Entity;
+import javax.ws.rs.core.EntityTag;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.bind.ValidationException;
 import java.math.BigDecimal;
 
 /**
@@ -20,35 +26,65 @@ public class BankAccountResource {
     private AcccountManagerDao acccountManagerDao;
 
     @GET
-    @Path("{email}")
+    @Path("{email}/balance")
     @Produces(MediaType.APPLICATION_JSON)
     public AccountBalance getAccountBalance(@PathParam("email") String email,
                                             @QueryParam("accountCode") String accountCode) {
 
-        System.out.println("Account balance for: email " + email + "accountCode: " + accountCode);
-        return acccountManagerDao.getAccountBalance(email, accountCode);
+        if (accountCode == null) {
+            throw new DataValidationException("Account code is missing");
+        }
+        AccountBalance accountBalance =  acccountManagerDao.getAccountBalance(email, accountCode);
+        return accountBalance;
+
     }
 
     @POST
-    @Path("deposit")
+    @Path("{email}/deposit")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response deposit(@FormParam("email") String email, @FormParam("accountCode") String accountCode,
+    public Response deposit(@PathParam("email") String email, @FormParam("accountCode") String accountCode,
                             @FormParam("amount") BigDecimal amount) {
-        System.out.println("Deposit  for: email " + email + "accountCode: " +accountCode);
-        acccountManagerDao.deposit(email, accountCode, amount);
-        return Response.status(Response.Status.CREATED).build();
+
+        AccountDeposit accountDeposit = new AccountDeposit();
+        accountDeposit.setAmount(amount);
+        accountDeposit.setAccountCode(accountCode);
+        accountDeposit.setEmail(email);
+        accountDeposit.validate();
+
+
+        acccountManagerDao.deposit(accountDeposit);
+        return buildResponse(Response.Status.CREATED, null, MediaType.TEXT_HTML);
+
     }
 
 
     @POST
-    @Path("transfer")
+    @Path("{email}/transfer")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response transfer(@FormParam("email") String email, @FormParam("from") String fromAccount,
+    public Response transfer(@PathParam("email") String fromEmail, @FormParam("toEmail") String toEmail,
+                             @FormParam("from") String fromAccount,
                              @FormParam("to") String toAccount, @FormParam("amount") BigDecimal amount) {
-        System.out.println("Transfer for: email " + email + "from: " + fromAccount + " to: " + toAccount);
-        acccountManagerDao.transfer(email, fromAccount, toAccount, amount);
-        return Response.status(Response.Status.CREATED).build();
+
+        AccountTransfer accountTransfer = new AccountTransfer();
+        accountTransfer.setAmount(amount);
+        accountTransfer.setFromAccount(fromAccount);
+        accountTransfer.setToAccount(toAccount);
+        accountTransfer.setFromEmail(fromEmail);
+        accountTransfer.setToEmail(toEmail);
+
+        accountTransfer.validate();
+
+        acccountManagerDao.transfer(accountTransfer);
+
+        return buildResponse(Response.Status.CREATED, null, MediaType.TEXT_HTML);
+
     }
 
-
+    private Response buildResponse (Response.Status status, Object entity, String encoding) {
+        Response.ResponseBuilder responseBuilder = Response.status(status).encoding(encoding);
+        if (entity != null) {
+            responseBuilder.entity(entity);
+        }
+        return responseBuilder.build();
+    }
 }

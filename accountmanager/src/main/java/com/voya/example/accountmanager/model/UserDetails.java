@@ -1,5 +1,7 @@
 package com.voya.example.accountmanager.model;
 
+import com.voya.example.accountmanager.model.exception.DataValidationException;
+
 import java.util.Date;
 
 /**
@@ -13,6 +15,13 @@ public class UserDetails {
 
     public UserDetails() {
 
+    }
+
+    public void validate() {
+        boolean allParams = email != null && username != null;
+        if (!allParams) {
+            throw new DataValidationException("The parameters {email, username} must not be null");
+        }
     }
 
     public String getUsername() {
