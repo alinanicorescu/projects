@@ -42,16 +42,8 @@ public class BankAccountResource {
     @POST
     @Path("{email}/deposit")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response deposit(@PathParam("email") String email, @FormParam("accountCode") String accountCode,
-                            @FormParam("amount") BigDecimal amount) {
-
-        AccountDeposit accountDeposit = new AccountDeposit();
-        accountDeposit.setAmount(amount);
-        accountDeposit.setAccountCode(accountCode);
-        accountDeposit.setEmail(email);
+    public Response deposit(@BeanParam AccountDeposit accountDeposit) {
         accountDeposit.validate();
-
-
         acccountManagerDao.deposit(accountDeposit);
         return buildResponse(Response.Status.CREATED, null, MediaType.TEXT_HTML);
 
@@ -61,21 +53,10 @@ public class BankAccountResource {
     @POST
     @Path("{email}/transfer")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response transfer(@PathParam("email") String fromEmail, @FormParam("toEmail") String toEmail,
-                             @FormParam("from") String fromAccount,
-                             @FormParam("to") String toAccount, @FormParam("amount") BigDecimal amount) {
-
-        AccountTransfer accountTransfer = new AccountTransfer();
-        accountTransfer.setAmount(amount);
-        accountTransfer.setFromAccount(fromAccount);
-        accountTransfer.setToAccount(toAccount);
-        accountTransfer.setFromEmail(fromEmail);
-        accountTransfer.setToEmail(toEmail);
+    public Response transfer(@BeanParam AccountTransfer accountTransfer) {
 
         accountTransfer.validate();
-
         acccountManagerDao.transfer(accountTransfer);
-
         return buildResponse(Response.Status.CREATED, null, MediaType.TEXT_HTML);
 
     }

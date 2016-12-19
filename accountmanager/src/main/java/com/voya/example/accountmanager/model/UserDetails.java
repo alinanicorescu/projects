@@ -2,6 +2,7 @@ package com.voya.example.accountmanager.model;
 
 import com.voya.example.accountmanager.model.exception.DataValidationException;
 
+import javax.ws.rs.FormParam;
 import java.util.Date;
 
 /**
@@ -9,8 +10,11 @@ import java.util.Date;
  */
 public class UserDetails {
 
+    @FormParam("email")
     private String email;
+    @FormParam("name")
     private String name;
+    @FormParam("username")
     private String username;
 
     public UserDetails() {

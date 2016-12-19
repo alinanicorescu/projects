@@ -2,6 +2,8 @@ package com.voya.example.accountmanager.model;
 
 import com.voya.example.accountmanager.model.exception.DataValidationException;
 
+import javax.ws.rs.FormParam;
+import javax.ws.rs.PathParam;
 import java.math.BigDecimal;
 
 /**
@@ -9,10 +11,15 @@ import java.math.BigDecimal;
  */
 public class AccountTransfer {
 
+    @PathParam("email")
     private String fromEmail;
+    @FormParam("toEmail")
     private String toEmail;
+    @FormParam("from")
     private String fromAccount;
+    @FormParam("to")
     private String toAccount;
+    @FormParam("amount")
     private BigDecimal amount;
 
     public void validate() throws DataValidationException {

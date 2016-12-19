@@ -18,18 +18,13 @@ import java.net.URI;
 @Path("users")
 public class UserAccountResource {
 
-
     @Autowired
     private AcccountManagerDao acccountManagerDao;
 
     @POST
     @Path("register")
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    public Response registerUser(@FormParam("email") String email, @FormParam("username") String userName) {
-
-        UserDetails userDetails = new UserDetails();
-        userDetails.setEmail(email);
-        userDetails.setUsername(userName);
+    public Response registerUser(@BeanParam UserDetails userDetails) {
         userDetails.validate();
         acccountManagerDao.registerUser(userDetails);
         return Response.status(Response.Status.CREATED).encoding(MediaType.APPLICATION_JSON).build();

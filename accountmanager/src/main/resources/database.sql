@@ -1,4 +1,5 @@
-
+CREATE SCHEMA `accountmanager` ;
+USE `accountmanager`;
 CREATE TABLE `USER_DETAILS` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(45) NOT NULL,

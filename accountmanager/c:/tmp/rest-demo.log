@@ -285,3 +285,45 @@
 23:48:04.731 [qtp1694556038-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 200 
 23:48:07.180 [qtp1694556038-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting GET for path account/alina.nicorescu/balance PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS: accountCode{ninaabc} STATUS: 200 
 23:48:07.181 [qtp1694556038-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 200 
+12:14:39.555 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path users/register PATH PARAMETERS:  QUERY PARAMETERS:  STATUS: 201 
+12:14:39.556 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:14:46.968 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting GET for path account/alina.nicorescu/balance PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS: accountCode{ninaabc} STATUS: 200 
+12:14:46.969 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 200 
+12:14:53.797 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/deposit PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:14:53.798 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:15:04.133 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path users/register PATH PARAMETERS:  QUERY PARAMETERS:  STATUS: 201 
+12:15:04.133 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:15:12.481 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/test.user4/deposit PATH PARAMETERS: email{test.user4} QUERY PARAMETERS:  STATUS: 201 
+12:15:12.481 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:15:17.304 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/transfer PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:15:17.304 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:23:22.948 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting GET for path account/alina.nicorescu/balance PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS: accountCode{ninaabc} STATUS: 200 
+12:23:22.948 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 200 
+12:23:31.033 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/deposit PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:23:31.033 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:23:37.474 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/deposit PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:23:37.474 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:23:52.720 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/deposit PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:23:52.720 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:26:28.813 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/transfer PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 500 
+12:26:28.813 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 500 
+12:27:41.590 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/transfer PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 201 
+12:27:41.591 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:31:08.002 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path users/register PATH PARAMETERS:  QUERY PARAMETERS:  STATUS: 201 
+12:31:08.002 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:36:53.665 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path users/register PATH PARAMETERS:  QUERY PARAMETERS:  STATUS: 201 
+12:36:53.666 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:37:00.759 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting GET for path account/david.bowie/balance PATH PARAMETERS: email{david.bowie} QUERY PARAMETERS: accountCode{ninaabc} STATUS: 404 
+12:37:00.759 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 404 
+12:37:21.299 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting GET for path account/david.bowie/balance PATH PARAMETERS: email{david.bowie} QUERY PARAMETERS: accountCode{dbowieabc} STATUS: 200 
+12:37:21.300 [qtp1860944798-20] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 200 
+12:37:27.355 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/david.bowie/deposit PATH PARAMETERS: email{david.bowie} QUERY PARAMETERS:  STATUS: 201 
+12:37:27.356 [qtp1860944798-22] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:37:32.876 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path users/register PATH PARAMETERS:  QUERY PARAMETERS:  STATUS: 201 
+12:37:32.877 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:37:38.525 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/bob.dylan/deposit PATH PARAMETERS: email{bob.dylan} QUERY PARAMETERS:  STATUS: 201 
+12:37:38.525 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
+12:37:43.538 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/alina.nicorescu/transfer PATH PARAMETERS: email{alina.nicorescu} QUERY PARAMETERS:  STATUS: 500 
+12:37:43.538 [qtp1860944798-21] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 500 
+12:38:02.143 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Requesting POST for path account/david.bowie/transfer PATH PARAMETERS: email{david.bowie} QUERY PARAMETERS:  STATUS: 201 
+12:38:02.143 [qtp1860944798-19] DEBUG c.v.e.a.rest.LoggingResponseFilter - Response status: 201 
