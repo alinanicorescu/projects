@@ -1,1 +1,0 @@
-CREATE SCHEMA `accountmanager` DEFAULT CHARACTER SET utf8 ;

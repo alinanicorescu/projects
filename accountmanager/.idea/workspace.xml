@@ -2,16 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f0e005a-83a9-4905-bc1c-ef4cdf69d26a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accountmanager.iml" afterPath="$PROJECT_DIR$/accountmanager.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/c:/tmp/rest-demo.log" afterPath="$PROJECT_DIR$/c:/tmp/rest-demo.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/AccountDeposit.java" afterPath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/AccountDeposit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/AccountTransfer.java" afterPath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/AccountTransfer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/UserDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/model/UserDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/rest/BankAccountResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/rest/BankAccountResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/rest/UserAccountResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/voya/example/accountmanager/rest/UserAccountResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/curls.txt" afterPath="$PROJECT_DIR$/src/main/resources/curls.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/database.sql" afterPath="$PROJECT_DIR$/src/main/resources/database.sql" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/BankAccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/TestResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/TransactionBo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/TransactionBoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/UserAccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/dao/AcccountManagerDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/dao/AccountManagerDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/dao/BankAccount.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/com/voya/example/accountmanager/model/UserDetails.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/curls.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/database.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/aopalliance-repackaged-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/asm-all-repackaged-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/bean-validator-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/class-model-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/commons-logging-1.1.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/config-types-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-api-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-config-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-core-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-locator-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-runlevel-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/hk2-utils-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javax.annotation-api-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javax.inject-1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javax.inject-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javax.servlet-api-3.1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-client-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-common-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-container-servlet-core-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-entity-filtering-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-guava-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-media-jaxb-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-media-json-jackson-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-server-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jersey-spring3-2.23.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-http-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-io-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-security-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-server-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-servlet-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-util-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-webapp-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/jetty-xml-9.3.11.v20160721.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/mysql-connector-java-5.1.36.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/osgi-resource-locator-1.0.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-aop-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-asm-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-beans-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-bridge-2.5.0-b05.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-context-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-core-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-expression-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-jdbc-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-tx-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/spring-web-3.0.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/tiger-types-1.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/lib/validation-api-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/accountmanager/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/MyApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/dao/AcccountManagerDao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/dao/AccountManagerDaoImpl$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/dao/AccountManagerDaoImpl$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/dao/AccountManagerDaoImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/dao/BankAccount.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/AccountBalance.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/AccountDeposit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/AccountDetailsGenerator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/AccountTransfer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/UserDetails.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/exception/AccountDatabaseException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/model/exception/DataValidationException.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/BankAccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/LoggingResponseFilter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/TestResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/UserAccountResource.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/mapper/DataAccessExceptionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/voya/example/accountmanager/rest/mapper/ValidationExceptionMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/curls.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/database.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/logback.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/JettyServer.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="accountmanager.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,8 +222,8 @@
       <file leaf-file-name="curls.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/curls.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="102" selection-start-line="2" selection-start-column="102" selection-end-line="2" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -286,24 +369,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accountmanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accountmanager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="accountmanager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -494,6 +559,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accountmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="accountmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="c:" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1029,12 +1112,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1481971422900</updated>
-      <workItem from="1482138551398" duration="2265000" />
+      <workItem from="1482138551398" duration="2367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2265000" />
+    <option name="totallyTimeSpent" value="2367000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1515,8 +1598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/curls.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="102" selection-start-line="2" selection-start-column="102" selection-end-line="2" selection-end-column="102" />
           <folding />
         </state>
       </provider>
