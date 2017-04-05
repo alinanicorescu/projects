@@ -1,7 +1,6 @@
 package biz.netcentric;
 
-import biz.netcentric.processors.SlightlyElementProcessor;
-import biz.netcentric.processors.SlightlyElementProcessorProvider;
+import biz.netcentric.processors.visitor.SlightlyNodeVisitor;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Document;
@@ -38,26 +37,12 @@ public class SlightlyScriptProcessor {
         Document document = null;
         try {
             document = Jsoup.parse(inputStream, null, baseUrl);
-            //use node traversor
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Elements elements =  document.getElementsByTag("html");
-        if (elements.isEmpty()) {
-            //exception
-        } else {
-            Element htmlElement = elements.first();
-            Elements htmlElements = htmlElement.children();
-            ListIterator<Element> htmlElementsIterator = htmlElements.listIterator();
-            while (htmlElementsIterator.hasNext()) {
-                Element childElement = htmlElementsIterator.next();
-
-                SlightlyElementProcessor elementProcessor =
-                        SlightlyElementProcessorProvider.getElementProcessor(childElement);
-                elementProcessor.process(childElement, outputStreamWriter);
-            }
-        }
+        SlightlyNodeVisitor nodeVisitor = new SlightlyNodeVisitor(outputStreamWriter);
+        document.traverse(nodeVisitor);
 
     }
 

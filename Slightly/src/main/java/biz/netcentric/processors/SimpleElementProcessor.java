@@ -9,10 +9,10 @@ import java.io.OutputStreamWriter;
 /**
  * Created by alinanicorescu on 05.04.2017.
  */
-public class DataForElementProcessor {
+public class SimpleElementProcessor {
 
     public static void process(Element element, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException {
-        outputStreamWriter.write("Process Data for " + element.tagName());
+        outputStreamWriter.write("Simple Element Processor " + element.tagName());
         outputStreamWriter.write("\n");
     }
 }
