@@ -3,6 +3,7 @@ package biz.netcentric.processors;
 import biz.netcentric.processors.visitor.ProcessingState;
 import org.jsoup.nodes.TextNode;
 
+import javax.script.ScriptException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -11,7 +12,7 @@ import java.io.OutputStreamWriter;
  */
 public class TextNodeProcessor {
 
-    public static void process(TextNode node, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException {
+    public static void process(TextNode node, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException, ScriptException {
         if (node.isBlank()) {
             return;
         }

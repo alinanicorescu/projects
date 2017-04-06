@@ -6,6 +6,7 @@ import org.jsoup.nodes.Attributes;
 import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 
+import javax.script.ScriptException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -14,7 +15,7 @@ import java.io.OutputStreamWriter;
  */
 public class ElementProcessor {
 
-    public static void process(Element element, ProcessingState state, OutputStreamWriter os) throws IOException {
+    public static void process(Element element, ProcessingState state, OutputStreamWriter os) throws IOException, ScriptException {
 
         if (isServerSideScriptTag(element)) {
             state.setIsScript(true);

@@ -1,11 +1,13 @@
 package biz.netcentric.processors.visitor;
 
 import biz.netcentric.processors.ElementProcessor;
-import biz.netcentric.processors.NodeProcessor;
+import biz.netcentric.processors.DataNodeProcessor;
 import biz.netcentric.processors.TextNodeProcessor;
 import org.jsoup.nodes.*;
 import org.jsoup.select.NodeVisitor;
 
+import javax.script.ScriptException;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -19,8 +21,8 @@ public class SlightlyNodeVisitor implements NodeVisitor {
 
     private OutputStreamWriter outputStreamWriter;
 
-    public  SlightlyNodeVisitor(OutputStreamWriter outputStreamWriter) {
-        this.state = new ProcessingState();
+    public  SlightlyNodeVisitor(HttpServletRequest request, OutputStreamWriter outputStreamWriter) {
+        this.state = new ProcessingState(request);
         this.outputStreamWriter = outputStreamWriter;
     }
 
@@ -42,13 +44,15 @@ public class SlightlyNodeVisitor implements NodeVisitor {
             }
             if (node instanceof TextNode) {
                 TextNodeProcessor.process((TextNode) node, state, outputStreamWriter);
+            }
+            else if (node instanceof DataNode) {
+                DataNodeProcessor.process(node, state, outputStreamWriter);
             } else if (node instanceof Element) {
                 ElementProcessor.process((Element) node, state, outputStreamWriter);
-            } else {
-
-                NodeProcessor.process(node, state, outputStreamWriter);
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ScriptException e) {
             e.printStackTrace();
         }
 
@@ -62,6 +66,14 @@ public class SlightlyNodeVisitor implements NodeVisitor {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
+        if (state.getEndTag() != null) {
+            try {
+                outputStreamWriter.write(state.getEndTag());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         state.reset();
+
     }
 }

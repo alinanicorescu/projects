@@ -38,7 +38,7 @@ public class SlightlyServlet extends HttpServlet {
 
         OutputStreamWriter os = new OutputStreamWriter(resp.getOutputStream());
         SlightlyProcessingContext processingContext = new SlightlyProcessingContext(req);
-        SlightlyScriptProcessor slightlyScriptProcessor = new SlightlyScriptProcessor(processingContext, os);
+        SlightlyScriptProcessor slightlyScriptProcessor = new SlightlyScriptProcessor(req, os);
         slightlyScriptProcessor.process(is);
         os.close();
 

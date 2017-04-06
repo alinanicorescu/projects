@@ -20,19 +20,19 @@ import java.util.ListIterator;
  */
 public class SlightlyScriptProcessor {
 
-    private SlightlyProcessingContext slightlyProcessingContext;
+    //private SlightlyProcessingContext slightlyProcessingContext;
     private OutputStreamWriter outputStreamWriter;
+    private HttpServletRequest httpServletRequest;
 
-    public SlightlyScriptProcessor(SlightlyProcessingContext slightlyProcessingContext, OutputStreamWriter outputStreamWriter) {
-        this.slightlyProcessingContext = slightlyProcessingContext;
+    public SlightlyScriptProcessor(HttpServletRequest httpServletRequest, OutputStreamWriter outputStreamWriter) {
+        this.httpServletRequest = httpServletRequest;
         this.outputStreamWriter = outputStreamWriter;
 
     }
 
     public void process (InputStream inputStream) {
 
-        HttpServletRequest request = slightlyProcessingContext.getHttpServletRequest();
-        String baseUrl = getBaseUrl(request);
+        String baseUrl = getBaseUrl(httpServletRequest);
 
         Document document = null;
         try {
@@ -41,7 +41,7 @@ public class SlightlyScriptProcessor {
             e.printStackTrace();
         }
 
-        SlightlyNodeVisitor nodeVisitor = new SlightlyNodeVisitor(outputStreamWriter);
+        SlightlyNodeVisitor nodeVisitor = new SlightlyNodeVisitor(httpServletRequest, outputStreamWriter);
         document.traverse(nodeVisitor);
 
     }

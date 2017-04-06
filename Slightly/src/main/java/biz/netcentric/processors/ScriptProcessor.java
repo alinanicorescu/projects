@@ -1,7 +1,11 @@
 package biz.netcentric.processors;
 
+import biz.netcentric.processors.visitor.ProcessingState;
 import org.jsoup.nodes.TextNode;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
@@ -10,8 +14,9 @@ import java.io.OutputStreamWriter;
  */
 public class ScriptProcessor {
 
-    public static void process(String script, OutputStreamWriter os) throws IOException {
-        os.write("Script processor");
+    public static void process(String script, ProcessingState state, OutputStreamWriter os) throws IOException, ScriptException {
+        ScriptEngine scriptEngine = state.getEngine();
+        scriptEngine.eval(script);
 
     }
 }
