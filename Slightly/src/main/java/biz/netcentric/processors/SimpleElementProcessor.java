@@ -7,6 +7,7 @@ import org.jsoup.parser.Tag;
 import javax.script.ScriptException;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.Map;
 import java.util.StringJoiner;
 
 /**
@@ -15,7 +16,6 @@ import java.util.StringJoiner;
 public class SimpleElementProcessor {
 
     public static void process(Element element, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException, ScriptException {
-
 
         StringJoiner startTagHtml = new StringJoiner("");
         startTagHtml.add("<").add(element.tagName());

@@ -5,6 +5,7 @@ import javax.script.ScriptEngineManager;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -17,10 +18,26 @@ public class ProcessingState {
     private int renderSettingIndex;
     private int scriptSettingIndex;
     private int currentIndex;
-    private int siblingStateIndex;
 
-    private int siblingIndex;
-    private Map<Integer, Map> siblingState = new HashMap<>();
+    public String getForVarName() {
+        return forVarName;
+    }
+
+    public void setForVarName(String forVarName) {
+        this.forVarName = forVarName;
+    }
+
+    private String forVarName;
+    public Iterator getForDataIterator() {
+        return forDataIterator;
+    }
+
+    public void setForDataIterator(Iterator forDataIterator) {
+        this.forDataIterator = forDataIterator;
+    }
+
+    private Iterator forDataIterator;
+
 
     private HttpServletRequest httpServletRequest;
     ScriptEngineManager scriptEngineManager;
@@ -31,27 +48,7 @@ public class ProcessingState {
 
     
 
-    public void initSiblingState() {
-        this.siblingState = new HashMap<>();
-        this.siblingStateIndex = currentIndex;
-    }
 
-    public void addToSiblingState(Integer siblingIndex, Map state) {
-        this.siblingState.put(siblingIndex, state);
-    }
-
-    public Map getFromSiblingState(Integer sibling) {
-        return this.siblingState.get(sibling);
-
-    }
-
-    public int getSiblingIndex() {
-        return siblingIndex;
-    }
-
-    public void setSiblingIndex(int siblingIndex) {
-        this.siblingIndex = siblingIndex;
-    }
 
     public ProcessingState(HttpServletRequest httpServletRequest, int elSize) {
         this.httpServletRequest = httpServletRequest;
@@ -113,12 +110,14 @@ public class ProcessingState {
         if (currentIndex == renderSettingIndex) {
             shouldRender = true;
         }
+        if (forDataIterator!= null && !forDataIterator.hasNext()) {
+            forDataIterator = null;
+            forVarName = null;
+        }
     }
 
     public void setCurrentIndex(int currentIndex) {
-        if (currentIndex >this.siblingStateIndex) {
-            initSiblingState();
-        }
+
         this.currentIndex = currentIndex;
     }
 

@@ -15,7 +15,7 @@ public class TextProcessor {
 
     public static void process(String text, ProcessingState processingState, OutputStreamWriter out) throws IOException, ScriptException {
 
-        Pattern p = Pattern.compile("(?!(\"))\\$\\{[^}]*\\}(?!\")");
+        Pattern p = Pattern.compile("\\$\\{[^}]*\\}");
         Matcher m = p.matcher(text);
 
         while ( m.find() ) {
@@ -29,10 +29,4 @@ public class TextProcessor {
         out.write(text);
     }
 
-    /*
-    public static void main(String[] args) {
-        Pattern p = Pattern.compile("(?!(\"))\\$\\{[^}]*\\}(?!\")");
-        Matcher m = p.matcher("${person.name}");
-        System.out.println(m.matches());
-    }*/
 }

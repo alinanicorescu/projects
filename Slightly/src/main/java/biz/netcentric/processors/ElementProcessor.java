@@ -23,35 +23,12 @@ public class ElementProcessor {
             return;
         }
 
-        Map<String, String> html5DataAttr = element.dataset();
-        if (html5DataAttr != null) {
-            //process data- elements
-            String dataIfAttr = html5DataAttr.get("if");
-            if (dataIfAttr != null) {
-                ExpressionProcessor expressionProcessor = new ExpressionProcessor();
-                Object obj = expressionProcessor.process(dataIfAttr, state, os);
-                if (obj != null) {
-                    state.setShouldRender(true);
-                } else {
-                    state.setShouldRender(false);
-                    return;
-                }
-            }
-
-            for (String key : html5DataAttr.keySet()) {
-                if (key.startsWith("for")) {
-                    state.setShouldRender(false);
-                    DataForElementProcessor.process(element, state, os);
-                    return;
-
-                }
-            }
+        boolean render = DataIfElementProcessor.process(element, state);
+        if (render) {
+            DataForElementProcessor.process(element, state, os);
         }
         SimpleElementProcessor.process(element, state, os);
-
     }
-
-
 
     private static boolean isServerSideScriptTag(Element element) {
         return "script".equals(element.tagName()) && "server/javascript".equals(element.attr("type"));

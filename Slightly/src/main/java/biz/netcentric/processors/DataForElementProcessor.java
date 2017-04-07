@@ -20,40 +20,35 @@ public class DataForElementProcessor {
 
         String dataForAttr = null;
         String varName = null;
-        String dataForKey = null;
-
+        String keyName = null;
         Map<String, String> html5DataAttr = element.dataset();
         for (String key : html5DataAttr.keySet()) {
             if (key.startsWith("for")) {
                 varName = key.substring("for-".length());
                 dataForAttr = html5DataAttr.get(key);
-                dataForKey = key;
+                keyName = "data-" + key;
                 break;
             }
         }
+        if (varName != null) {
+            if (state.getForDataIterator() == null) {
                 ExpressionProcessor expressionProcessor = new ExpressionProcessor();
                 Object collection = expressionProcessor.process(dataForAttr, state, outputStreamWriter);
-                Collection objects = (Collection)collection;
-                state.initSiblingState();
-
-                //put vars in context
-                /*
-                contextMap.put(varName, objects);
-                Bindings bindings = state.getEngine().createBindings();
-                bindings.put("siblingMap", contextMap);
-                state.getEngine().setBindings(bindings, state.getCurrentIndex());
-*/
+                Collection objects = (Collection) collection;
+                state.setForDataIterator(objects.iterator());
+                state.setForVarName(varName);
                 //changed dom
-                element.removeAttr("data-" + dataForKey);
-                int index = 1;
-                for (Object obj : objects) {
-                    element.after(element.html());
-                    Map<String, Object> contextMap = new HashMap<>();
-                    contextMap.put(varName, obj);
-                    state.addToSiblingState(index++, contextMap);
+                //element.removeAttr("data-" + dataForKey);
+                for (int i = 0; i < objects.size() - 1; i++) {
+                    element.after(element.outerHtml());
                 }
-                System.out.println("data for: " + varName + " - -" + dataForAttr);
+            } else {
+                element.removeAttr(keyName);
             }
+            state.getEngine().put(state.getForVarName(), state.getForDataIterator().next());
+            System.out.println("data for: " + varName + " - -" + dataForAttr);
+        }
+    }
         }
 
 

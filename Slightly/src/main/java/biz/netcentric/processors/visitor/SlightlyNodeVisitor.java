@@ -32,10 +32,8 @@ public class SlightlyNodeVisitor implements NodeVisitor {
 
         try {
             state.setCurrentIndex(i);
-            state.setSiblingIndex(node.siblingIndex());
 
             if (!state.isShouldRender()) {
-                outputStreamWriter.write("Should not render!");
                 return;
             }
 
@@ -69,16 +67,9 @@ public class SlightlyNodeVisitor implements NodeVisitor {
 
     @Override
     public void tail(Node node, int i) {
-        /*
-        try {
-            outputStreamWriter.write("Leaving.." + node.nodeName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-        System.out.println("End visiting : " + node.nodeName() + " level: " + i);
+
         if (node instanceof Element && state.getEndTag(i) != null) {
             try {
-                System.out.println("Write end tag for : " + i + " end tag is: " + state.getEndTag(i));
                 outputStreamWriter.write(state.getEndTag(i));
             } catch (IOException e) {
                 e.printStackTrace();
