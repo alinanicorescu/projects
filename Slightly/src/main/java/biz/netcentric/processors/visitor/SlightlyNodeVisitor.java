@@ -21,20 +21,15 @@ public class SlightlyNodeVisitor implements NodeVisitor {
 
     private OutputStreamWriter outputStreamWriter;
 
-    public  SlightlyNodeVisitor(HttpServletRequest request, OutputStreamWriter outputStreamWriter) {
-        this.state = new ProcessingState(request);
+    public  SlightlyNodeVisitor(HttpServletRequest request, OutputStreamWriter outputStreamWriter, int elSize) {
+        this.state = new ProcessingState(request, elSize);
         this.outputStreamWriter = outputStreamWriter;
     }
 
 
     @Override
     public void head(Node node, int i) {
-        /*
-        try {
-            outputStreamWriter.write("Entering.." + node.nodeName());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
+
         try {
             state.setCurrentIndex(i);
 
@@ -42,13 +37,26 @@ public class SlightlyNodeVisitor implements NodeVisitor {
                 outputStreamWriter.write("Should not render!");
                 return;
             }
+
+            if (node instanceof Document) {
+                Document document = (Document) node;
+                outputStreamWriter.write("<!DOCTYPE html>");
+                return;
+            }
+
             if (node instanceof TextNode) {
                 TextNodeProcessor.process((TextNode) node, state, outputStreamWriter);
+                return;
             }
+
             else if (node instanceof DataNode) {
                 DataNodeProcessor.process(node, state, outputStreamWriter);
-            } else if (node instanceof Element) {
+                return;
+            }
+
+            if (node instanceof Element) {
                 ElementProcessor.process((Element) node, state, outputStreamWriter);
+                return;
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -66,9 +74,11 @@ public class SlightlyNodeVisitor implements NodeVisitor {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-        if (state.getEndTag() != null) {
+        System.out.println("End visiting : " + node.nodeName() + " level: " + i);
+        if (node instanceof Element && state.getEndTag(i) != null) {
             try {
-                outputStreamWriter.write(state.getEndTag());
+                System.out.println("Write end tag for : " + i + " end tag is: " + state.getEndTag(i));
+                outputStreamWriter.write(state.getEndTag(i));
             } catch (IOException e) {
                 e.printStackTrace();
             }

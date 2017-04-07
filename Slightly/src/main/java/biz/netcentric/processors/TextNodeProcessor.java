@@ -17,7 +17,6 @@ public class TextNodeProcessor {
             return;
         }
         TextProcessor.process(node.text(), state, outputStreamWriter);
-
         }
 
     }

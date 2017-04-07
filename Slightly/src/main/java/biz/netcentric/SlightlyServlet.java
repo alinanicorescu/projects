@@ -24,7 +24,7 @@ public class SlightlyServlet extends HttpServlet {
         String pathWithNoExt = servletPath.substring(0, extIndex);
         String htmlFileName = pathWithNoExt.substring(pathWithNoExt.lastIndexOf("/"));
 
-        resp.getOutputStream().print("Slightly servlet : req html file is! :" + htmlFileName);
+        //resp.getOutputStream().print("Slightly servlet : req html file is! :" + htmlFileName);
         InputStream is = getServletContext().getResourceAsStream(htmlFileName + ".html");
 
         /*

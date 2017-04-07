@@ -3,6 +3,7 @@ package biz.netcentric.processors.visitor;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 
 /**
  * Created by alinanicorescu on 05/04/2017.
@@ -17,17 +18,16 @@ public class ProcessingState {
     private HttpServletRequest httpServletRequest;
     ScriptEngineManager scriptEngineManager;
 
-    private int endIndex;
-    private String endTag;
+    private String[] endTags;
 
     ScriptEngine engine;
 
-    public ProcessingState(HttpServletRequest httpServletRequest) {
+    public ProcessingState(HttpServletRequest httpServletRequest, int elSize) {
         this.httpServletRequest = httpServletRequest;
         this.scriptEngineManager = new ScriptEngineManager();
         this.engine = scriptEngineManager.getEngineByName("rhino");
         engine.put("request", httpServletRequest);
-
+        this.endTags = new String[elSize];
     }
 
     public ScriptEngine getEngine() {
@@ -39,16 +39,15 @@ public class ProcessingState {
     }
 
     public void setEndTag(String endTag) {
-        this.endIndex = currentIndex;
-        this.endTag = endTag;
+        System.out.println("Writing the end tag for: " + endTag + " i " +currentIndex);
+
+        this.endTags[currentIndex] = endTag;
     }
 
-    public String getEndTag() {
-        if (currentIndex == endIndex) {
-            return endTag;
-        }
-        return null;
+    public String getEndTag(int forNodeIndex) {
+       return this.endTags[forNodeIndex];
     }
+
 
     public boolean isShouldRender() {
         if (renderSettingIndex <= currentIndex) {
@@ -83,7 +82,6 @@ public class ProcessingState {
         if (currentIndex == renderSettingIndex) {
             shouldRender = true;
         }
-        this.endTag = null;
     }
 
     public void setCurrentIndex(int currentIndex) {

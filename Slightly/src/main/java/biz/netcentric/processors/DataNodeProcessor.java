@@ -15,13 +15,11 @@ public class DataNodeProcessor {
 
     public static void process(Node node, ProcessingState state, OutputStreamWriter os) throws IOException, ScriptException {
         if (state.isScript()) {
-            //ScriptProcessor.process(node);
             ScriptProcessor scriptProcessor = new ScriptProcessor();
             DataNode dataNode = (DataNode)node;
             scriptProcessor.process(dataNode.getWholeData(), state, os);
-            os.write("Node processor: is script tag");
+            //os.write("Node processor: is script tag");
             return;
         }
     }
-
 }

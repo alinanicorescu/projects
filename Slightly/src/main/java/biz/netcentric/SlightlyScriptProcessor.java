@@ -37,11 +37,12 @@ public class SlightlyScriptProcessor {
         Document document = null;
         try {
             document = Jsoup.parse(inputStream, null, baseUrl);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        SlightlyNodeVisitor nodeVisitor = new SlightlyNodeVisitor(httpServletRequest, outputStreamWriter);
+        SlightlyNodeVisitor nodeVisitor = new SlightlyNodeVisitor(httpServletRequest, outputStreamWriter, document.getAllElements().size());
         document.traverse(nodeVisitor);
 
     }

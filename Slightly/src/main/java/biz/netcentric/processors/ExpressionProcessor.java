@@ -15,7 +15,6 @@ public class ExpressionProcessor {
     public Object process (String expression, ProcessingState state, OutputStreamWriter os) throws IOException, ScriptException {
         ScriptEngine engine = state.getEngine();
         Object result = engine.eval(expression);
-        os.write("Expression processor :" + result + "\n");
         return result;
     }
 }
