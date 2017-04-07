@@ -4,6 +4,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by alinanicorescu on 05/04/2017.
@@ -15,12 +17,41 @@ public class ProcessingState {
     private int renderSettingIndex;
     private int scriptSettingIndex;
     private int currentIndex;
+    private int siblingStateIndex;
+
+    private int siblingIndex;
+    private Map<Integer, Map> siblingState = new HashMap<>();
+
     private HttpServletRequest httpServletRequest;
     ScriptEngineManager scriptEngineManager;
 
     private String[] endTags;
 
     ScriptEngine engine;
+
+    
+
+    public void initSiblingState() {
+        this.siblingState = new HashMap<>();
+        this.siblingStateIndex = currentIndex;
+    }
+
+    public void addToSiblingState(Integer siblingIndex, Map state) {
+        this.siblingState.put(siblingIndex, state);
+    }
+
+    public Map getFromSiblingState(Integer sibling) {
+        return this.siblingState.get(sibling);
+
+    }
+
+    public int getSiblingIndex() {
+        return siblingIndex;
+    }
+
+    public void setSiblingIndex(int siblingIndex) {
+        this.siblingIndex = siblingIndex;
+    }
 
     public ProcessingState(HttpServletRequest httpServletRequest, int elSize) {
         this.httpServletRequest = httpServletRequest;
@@ -85,6 +116,9 @@ public class ProcessingState {
     }
 
     public void setCurrentIndex(int currentIndex) {
+        if (currentIndex >this.siblingStateIndex) {
+            initSiblingState();
+        }
         this.currentIndex = currentIndex;
     }
 
@@ -94,5 +128,9 @@ public class ProcessingState {
 
     public void setHttpServletRequest(HttpServletRequest httpServletRequest) {
         this.httpServletRequest = httpServletRequest;
+    }
+
+    public int getCurrentIndex() {
+        return currentIndex;
     }
 }

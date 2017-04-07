@@ -32,6 +32,7 @@ public class SlightlyNodeVisitor implements NodeVisitor {
 
         try {
             state.setCurrentIndex(i);
+            state.setSiblingIndex(node.siblingIndex());
 
             if (!state.isShouldRender()) {
                 outputStreamWriter.write("Should not render!");
