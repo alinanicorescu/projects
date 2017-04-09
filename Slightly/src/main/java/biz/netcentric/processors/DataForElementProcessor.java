@@ -1,55 +1,58 @@
 package biz.netcentric.processors;
 
-import biz.netcentric.processors.visitor.ProcessingState;
+import biz.netcentric.SlightlyProcessingContext;
+import biz.netcentric.SlightlyProcessingException;
+import biz.netcentric.Utils;
 import org.jsoup.nodes.Element;
 
-import javax.script.Bindings;
-import javax.script.ScriptException;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by alinanicorescu on 05.04.2017.
+ * Processor for data-for elements
  */
-public class DataForElementProcessor {
+public class DataForElementProcessor  {
 
-    public static void process(Element element, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException, ScriptException {
+    /**
+     * Process data-for attributes of element
+     * If the element contains a data-for attribute, the data-for expression is evaluated
+     * If the expression is evaluated as false,
+     * the element should not be processed and the result of this method will be false.
+     * Otherwise, the element will be processed and the method will return true.
+     * @return <code>true</code>if the element should be displayed, <code>false</code>otherwise
+     * @throws SlightlyProcessingException
+     */
+    public static boolean process(Element element, SlightlyProcessingContext context) throws SlightlyProcessingException {
 
-        String dataForAttr = null;
-        String varName = null;
-        String keyName = null;
-        Map<String, String> html5DataAttr = element.dataset();
-        for (String key : html5DataAttr.keySet()) {
-            if (key.startsWith("for")) {
-                varName = key.substring("for-".length());
-                dataForAttr = html5DataAttr.get(key);
-                keyName = "data-" + key;
-                break;
-            }
-        }
-        if (varName != null) {
-            if (state.getForDataIterator() == null) {
-                ExpressionProcessor expressionProcessor = new ExpressionProcessor();
-                Object collection = expressionProcessor.process(dataForAttr, state, outputStreamWriter);
+        Map.Entry<String, String> forDataAttr = Utils.getForDataAttributeVarName(element);
+        if (forDataAttr != null) {
+            String varName = forDataAttr.getKey().substring("for-".length());
+            if (context.getForNodeDataIterator() == null) {
+                Object collection = ScriptExpressionProcessor.process(forDataAttr.getValue(), context);
                 Collection objects = (Collection) collection;
-                state.setForDataIterator(objects.iterator());
-                state.setForVarName(varName);
+                if (objects == null || objects.size() == 0) {
+                    context.setShouldProcessNode(false);
+                    return false;
+                }
+                context.setForNodeDataIterator(objects.iterator());
+                context.setForNodeVarName(varName);
                 //changed dom
-                //element.removeAttr("data-" + dataForKey);
                 for (int i = 0; i < objects.size() - 1; i++) {
                     element.after(element.outerHtml());
                 }
-            } else {
-                element.removeAttr(keyName);
+
             }
-            state.getEngine().put(state.getForVarName(), state.getForDataIterator().next());
-            System.out.println("data for: " + varName + " - -" + dataForAttr);
+            String var = (String)context.getForNodeDataIterator().next();
+            context.getScriptEngine().put(context.getForNodeVarName(), var);
+            element.removeAttr("data-" + forDataAttr.getKey());
+
         }
+        return true;
     }
-        }
+
+
+}
 
 
 

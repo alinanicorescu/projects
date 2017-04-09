@@ -1,36 +1,21 @@
 package biz.netcentric.processors;
 
-import biz.netcentric.processors.visitor.ProcessingState;
+import biz.netcentric.SlightlyProcessingContext;
+import biz.netcentric.SlightlyProcessingException;
+import biz.netcentric.Utils;
 import org.jsoup.nodes.*;
-import org.jsoup.parser.Tag;
-
-import javax.script.ScriptException;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.Map;
-import java.util.StringJoiner;
 
 /**
  * Created by alinanicorescu on 05.04.2017.
  */
 public class SimpleElementProcessor {
 
-    public static void process(Element element, ProcessingState state, OutputStreamWriter outputStreamWriter) throws IOException, ScriptException {
-
-        StringJoiner startTagHtml = new StringJoiner("");
-        startTagHtml.add("<").add(element.tagName());
-                if (element.attributes().size() > 0) {
-                    startTagHtml.add(element.attributes().html());
-                }
-
-        startTagHtml.add(">");
+    public static void process(Element element, SlightlyProcessingContext context) throws SlightlyProcessingException {
+        String startTagHtml = Utils.getStartTagText(element);
        if (element.childNodes().size() > 0) {
-           //in html 5, only non void elements must be closed
-          state.setEndTag(new StringJoiner("").add("</").add(element.tagName()).add(">").toString());
+           //in html5, only non void elements must be closed
+          context.setEndTag(Utils.getEndTagText(element));
         }
-
-        TextProcessor textProcessor = new TextProcessor();
-        textProcessor.process(startTagHtml.toString(), state, outputStreamWriter);
-
+        TextProcessor.process(startTagHtml.toString(), context);
     }
 }

@@ -1,41 +1,45 @@
 package biz.netcentric.processors;
 
-import biz.netcentric.processors.visitor.ProcessingState;
+import biz.netcentric.SlightlyProcessingContext;
+import biz.netcentric.SlightlyProcessingException;
 import org.jsoup.nodes.Element;
-
-import javax.script.ScriptException;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.Map;
 
 /**
  * Created by alinanicorescu on 07/04/2017.
+ * Processor for data-if elements
  */
 public class DataIfElementProcessor {
 
-    public static boolean process(Element element, ProcessingState state) throws IOException, ScriptException {
-
+    /**
+     * Process data-if attributes of element
+     * If the element contains a data-if attribute, the data-if expression is evaluated
+     * If the expression is evaluated as false,
+     * the element should not be displayed and the result of this method will be false.
+     * Otherwise, the element will be processed and the method will return true.
+     * @param element
+     * @param context
+     * @return <code>true</code>if the element should be displayed, <code>false</code>otherwise
+     * @throws SlightlyProcessingException
+     */
+    public static boolean process(Element element, SlightlyProcessingContext context) throws SlightlyProcessingException {
 
         Map<String, String> html5DataAttr = element.dataset();
         if (html5DataAttr != null) {
             //process data- elements
             String dataIfAttr = html5DataAttr.get("if");
             if (dataIfAttr != null) {
-                ExpressionProcessor expressionProcessor = new ExpressionProcessor();
-                Object obj = expressionProcessor.process(dataIfAttr, state, null);
+                Object obj = ScriptExpressionProcessor.process(dataIfAttr, context);
                 boolean cond = (obj != null) ? (obj instanceof Boolean ? (Boolean) obj : true) : false;
-
                 if (cond) {
-                    state.setShouldRender(true);
+                    context.setShouldProcessNode(true);
                     element.removeAttr("data-if");
                 } else {
-                    state.setShouldRender(false);
+                    context.setShouldProcessNode(false);
                 }
                 return cond;
-
             }
         }
         return true;
-
     }
 }

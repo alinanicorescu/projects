@@ -1,38 +1,29 @@
 package biz.netcentric.processors;
 
-import biz.netcentric.processors.visitor.ProcessingState;
-import org.jsoup.nodes.Attribute;
-import org.jsoup.nodes.Attributes;
+import biz.netcentric.SlightlyProcessingContext;
+import biz.netcentric.SlightlyProcessingException;
+import biz.netcentric.Utils;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
 
-import javax.script.ScriptException;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.util.Map;
 
 /**
  * Created by alinanicorescu on 05/04/2017.
+ * Processor for element nodes
  */
 public class ElementProcessor {
 
-    public static void process(Element element, ProcessingState state, OutputStreamWriter os) throws IOException, ScriptException {
 
-        if (isServerSideScriptTag(element)) {
-            state.setIsScript(true);
+    public static void process(Element element, SlightlyProcessingContext context) throws SlightlyProcessingException {
+        if (Utils.isServerSideScriptTag(element)) {
+            context.setScriptNode(true);
             return;
         }
-
-        boolean render = DataIfElementProcessor.process(element, state);
-        if (render) {
-            DataForElementProcessor.process(element, state, os);
+        //(Data-if element attribute takes precedence over data-for element attribute)
+        if (DataIfElementProcessor.process(element, context)) {
+            if (DataForElementProcessor.process(element, context)) {
+                SimpleElementProcessor.process(element, context);
+            }
         }
-        SimpleElementProcessor.process(element, state, os);
-    }
-
-    private static boolean isServerSideScriptTag(Element element) {
-        return "script".equals(element.tagName()) && "server/javascript".equals(element.attr("type"));
-
     }
 }
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script type="server/javascript">
+importClass(Packages.biz.netcentric.Person)
+var person=Person.lookup(2)
+</script>
+<head>
+<title>${person.name}</title>
+</head>
+<body>
+	<h1 title="${person.name}">${person.name}</h1>
+	<h2 data-if="person.married" title="${person.spouse}">Spouse:
+		${person.spouse}</h2>
+	<br>
+	<div data-for-child="person.children">Child: ${child}</div>
+</body>
+</html>
