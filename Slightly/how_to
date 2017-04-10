@@ -1,0 +1,10 @@
+Start the web app using: mvn jetty:run
+
+http://localhost:8080/Sightly/index.html
+http://localhost:8080/Sightly/index.html?id=1
+http://localhost:8080/Sightly/index.html?id=2
+http://localhost:8080/Sightly/index.html?id=3
+
+Junit Tests 
+
+SlightlyProcessingTest verifies that the correct html markup is generated as a response to the requests above
