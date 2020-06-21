@@ -1,4 +1,4 @@
-# projectsProblema IOS – Orange Money 
+# Orange Money Project
 
 Se va realiza o aplicatie care va afisa cursul de schimb si va avea urmatoarele functionalitati/ecrane:
 
