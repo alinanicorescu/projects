@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2189E7956C8630E990CAB064 /* Pods_test_orange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FF0AC1BDAE22D2E3951F54 /* Pods_test_orange.framework */; };
+		C000873335C21232E6EB9837 /* Pods_test_orangeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34BF09D35E6AFB45D8DDA1AB /* Pods_test_orangeTests.framework */; };
+		F25DB9E7249F7B2100EBFAC2 /* SettingsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DB9E6249F7B2100EBFAC2 /* SettingsCellViewModel.swift */; };
+		F25DB9EA249F92BB00EBFAC2 /* ExchangeTestServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DB9E8249F91DD00EBFAC2 /* ExchangeTestServiceMock.swift */; };
+		F25DB9EC249FA1C800EBFAC2 /* test_HistoricalRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25DB9EB249FA1C800EBFAC2 /* test_HistoricalRates.swift */; };
+		F267E880249A6C860075FC76 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267E87F249A6C860075FC76 /* Constants.swift */; };
+		F267E887249A6F0F0075FC76 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267E885249A6F0F0075FC76 /* SettingsCell.swift */; };
+		F267E888249A6F0F0075FC76 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F267E886249A6F0F0075FC76 /* SettingsCell.xib */; };
+		F267E894249B61DA0075FC76 /* ExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267E893249B61DA0075FC76 /* ExchangeRates.swift */; };
+		F267E896249B7B6A0075FC76 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F267E895249B7B6A0075FC76 /* HomeViewModel.swift */; };
+		F2D9DB68A6921BA63844DCE4 /* Pods_test_orange_test_orangeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EF29681388F09100B3537C /* Pods_test_orange_test_orangeUITests.framework */; };
+		F2E6384D249A54CC00085B54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6384C249A54CC00085B54 /* AppDelegate.swift */; };
+		F2E6384F249A54CC00085B54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6384E249A54CC00085B54 /* SceneDelegate.swift */; };
+		F2E63854249A54CC00085B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E63852249A54CC00085B54 /* Main.storyboard */; };
+		F2E63856249A54CD00085B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E63855249A54CD00085B54 /* Assets.xcassets */; };
+		F2E63859249A54CD00085B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E63857249A54CD00085B54 /* LaunchScreen.storyboard */; };
+		F2E63864249A54CD00085B54 /* test_latestRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E63863249A54CD00085B54 /* test_latestRates.swift */; };
+		F2E6386F249A54CD00085B54 /* test_orangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6386E249A54CD00085B54 /* test_orangeUITests.swift */; };
+		F2E63882249A5A3400085B54 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E63880249A5A3400085B54 /* HomeCell.swift */; };
+		F2E63883249A5A3400085B54 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E63881249A5A3400085B54 /* HomeCell.xib */; };
+		F2E63885249A5D1900085B54 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E63884249A5D1900085B54 /* HomeViewController.swift */; };
+		F2E63887249A5D4A00085B54 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E63886249A5D4A00085B54 /* SettingsViewController.swift */; };
+		F2E63889249A5D6700085B54 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E63888249A5D6700085B54 /* HistoryViewController.swift */; };
+		F2E6388B249A606400085B54 /* ExchangeRatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E6388A249A606400085B54 /* ExchangeRatesService.swift */; };
+		F2EA8530249B9425003CDB22 /* HistoricalExchangeRates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA852F249B9425003CDB22 /* HistoricalExchangeRates.swift */; };
+		F2EA8532249B951C003CDB22 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA8531249B951C003CDB22 /* HistoryViewModel.swift */; };
+		F2EA853A249BC404003CDB22 /* HistoryRatesChartFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA8539249BC404003CDB22 /* HistoryRatesChartFactory.swift */; };
+		F2EA853C249BE4AF003CDB22 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2EA853B249BE4AF003CDB22 /* Common.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2E63860249A54CD00085B54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2E63841249A54CC00085B54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E63848249A54CC00085B54;
+			remoteInfo = test.orange;
+		};
+		F2E6386B249A54CD00085B54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2E63841249A54CC00085B54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2E63848249A54CC00085B54;
+			remoteInfo = test.orange;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0263963F5871661A562288F7 /* Pods-test.orange-test.orangeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orange-test.orangeUITests.release.xcconfig"; path = "Target Support Files/Pods-test.orange-test.orangeUITests/Pods-test.orange-test.orangeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		34BF09D35E6AFB45D8DDA1AB /* Pods_test_orangeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_orangeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C7B6552250B4594F8C6AB7 /* Pods-test.orange-test.orangeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orange-test.orangeUITests.debug.xcconfig"; path = "Target Support Files/Pods-test.orange-test.orangeUITests/Pods-test.orange-test.orangeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		73FF0AC1BDAE22D2E3951F54 /* Pods_test_orange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_orange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A15EE6084D59C4643FFAD8 /* Pods-test.orange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orange.debug.xcconfig"; path = "Target Support Files/Pods-test.orange/Pods-test.orange.debug.xcconfig"; sourceTree = "<group>"; };
+		A208BB1AFE35384270F2C9D5 /* Pods-test.orangeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orangeTests.release.xcconfig"; path = "Target Support Files/Pods-test.orangeTests/Pods-test.orangeTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7EF29681388F09100B3537C /* Pods_test_orange_test_orangeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_orange_test_orangeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC8E2610A3DCF3899934925 /* Pods-test.orange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orange.release.xcconfig"; path = "Target Support Files/Pods-test.orange/Pods-test.orange.release.xcconfig"; sourceTree = "<group>"; };
+		F25DB9E6249F7B2100EBFAC2 /* SettingsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellViewModel.swift; sourceTree = "<group>"; };
+		F25DB9E8249F91DD00EBFAC2 /* ExchangeTestServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeTestServiceMock.swift; sourceTree = "<group>"; };
+		F25DB9EB249FA1C800EBFAC2 /* test_HistoricalRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_HistoricalRates.swift; sourceTree = "<group>"; };
+		F267E87F249A6C860075FC76 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F267E885249A6F0F0075FC76 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		F267E886249A6F0F0075FC76 /* SettingsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		F267E893249B61DA0075FC76 /* ExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRates.swift; sourceTree = "<group>"; };
+		F267E895249B7B6A0075FC76 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F2E63849249A54CC00085B54 /* test.orange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.orange.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E6384C249A54CC00085B54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2E6384E249A54CC00085B54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F2E63853249A54CC00085B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2E63855249A54CD00085B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2E63858249A54CD00085B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2E6385A249A54CD00085B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E6385F249A54CD00085B54 /* test.orangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.orangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E63863249A54CD00085B54 /* test_latestRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_latestRates.swift; sourceTree = "<group>"; };
+		F2E63865249A54CD00085B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E6386A249A54CD00085B54 /* test.orangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test.orangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E6386E249A54CD00085B54 /* test_orangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_orangeUITests.swift; sourceTree = "<group>"; };
+		F2E63870249A54CD00085B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E63880249A5A3400085B54 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		F2E63881249A5A3400085B54 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		F2E63884249A5D1900085B54 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F2E63886249A5D4A00085B54 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F2E63888249A5D6700085B54 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		F2E6388A249A606400085B54 /* ExchangeRatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesService.swift; sourceTree = "<group>"; };
+		F2EA852F249B9425003CDB22 /* HistoricalExchangeRates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalExchangeRates.swift; sourceTree = "<group>"; };
+		F2EA8531249B951C003CDB22 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		F2EA8539249BC404003CDB22 /* HistoryRatesChartFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRatesChartFactory.swift; sourceTree = "<group>"; };
+		F2EA853B249BE4AF003CDB22 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		F598FF5CF4909F7EC090395A /* Pods-test.orangeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.orangeTests.debug.xcconfig"; path = "Target Support Files/Pods-test.orangeTests/Pods-test.orangeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2E63846249A54CC00085B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2189E7956C8630E990CAB064 /* Pods_test_orange.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E6385C249A54CD00085B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C000873335C21232E6EB9837 /* Pods_test_orangeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E63867249A54CD00085B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2D9DB68A6921BA63844DCE4 /* Pods_test_orange_test_orangeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C56665580CEB3F9E69FC092A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73FF0AC1BDAE22D2E3951F54 /* Pods_test_orange.framework */,
+				B7EF29681388F09100B3537C /* Pods_test_orange_test_orangeUITests.framework */,
+				34BF09D35E6AFB45D8DDA1AB /* Pods_test_orangeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4943802A5CA80907DDA0AB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97A15EE6084D59C4643FFAD8 /* Pods-test.orange.debug.xcconfig */,
+				DFC8E2610A3DCF3899934925 /* Pods-test.orange.release.xcconfig */,
+				63C7B6552250B4594F8C6AB7 /* Pods-test.orange-test.orangeUITests.debug.xcconfig */,
+				0263963F5871661A562288F7 /* Pods-test.orange-test.orangeUITests.release.xcconfig */,
+				F598FF5CF4909F7EC090395A /* Pods-test.orangeTests.debug.xcconfig */,
+				A208BB1AFE35384270F2C9D5 /* Pods-test.orangeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F25DB9ED249FAA2300EBFAC2 /* mock */ = {
+			isa = PBXGroup;
+			children = (
+				F25DB9E8249F91DD00EBFAC2 /* ExchangeTestServiceMock.swift */,
+			);
+			path = mock;
+			sourceTree = "<group>";
+		};
+		F267E88F249A7DE90075FC76 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F2E63886249A5D4A00085B54 /* SettingsViewController.swift */,
+				F267E885249A6F0F0075FC76 /* SettingsCell.swift */,
+				F267E886249A6F0F0075FC76 /* SettingsCell.xib */,
+				F25DB9E6249F7B2100EBFAC2 /* SettingsCellViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F267E890249A82250075FC76 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F2E63884249A5D1900085B54 /* HomeViewController.swift */,
+				F267E895249B7B6A0075FC76 /* HomeViewModel.swift */,
+				F2E63881249A5A3400085B54 /* HomeCell.xib */,
+				F2E63880249A5A3400085B54 /* HomeCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F267E891249A823B0075FC76 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				F2E63888249A5D6700085B54 /* HistoryViewController.swift */,
+				F2EA8531249B951C003CDB22 /* HistoryViewModel.swift */,
+				F2EA8539249BC404003CDB22 /* HistoryRatesChartFactory.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F267E892249A82540075FC76 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F25DB9ED249FAA2300EBFAC2 /* mock */,
+				F2E6388A249A606400085B54 /* ExchangeRatesService.swift */,
+				F267E893249B61DA0075FC76 /* ExchangeRates.swift */,
+				F2EA852F249B9425003CDB22 /* HistoricalExchangeRates.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F2E63840249A54CC00085B54 = {
+			isa = PBXGroup;
+			children = (
+				F2E6384B249A54CC00085B54 /* test.orange */,
+				F2E63862249A54CD00085B54 /* test.orangeTests */,
+				F2E6386D249A54CD00085B54 /* test.orangeUITests */,
+				F2E6384A249A54CC00085B54 /* Products */,
+				E4943802A5CA80907DDA0AB2 /* Pods */,
+				C56665580CEB3F9E69FC092A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F2E6384A249A54CC00085B54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2E63849249A54CC00085B54 /* test.orange.app */,
+				F2E6385F249A54CD00085B54 /* test.orangeTests.xctest */,
+				F2E6386A249A54CD00085B54 /* test.orangeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2E6384B249A54CC00085B54 /* test.orange */ = {
+			isa = PBXGroup;
+			children = (
+				F267E87F249A6C860075FC76 /* Constants.swift */,
+				F2EA853B249BE4AF003CDB22 /* Common.swift */,
+				F267E892249A82540075FC76 /* Service */,
+				F267E891249A823B0075FC76 /* History */,
+				F267E890249A82250075FC76 /* Home */,
+				F267E88F249A7DE90075FC76 /* Settings */,
+				F2E6384C249A54CC00085B54 /* AppDelegate.swift */,
+				F2E6384E249A54CC00085B54 /* SceneDelegate.swift */,
+				F2E63852249A54CC00085B54 /* Main.storyboard */,
+				F2E63855249A54CD00085B54 /* Assets.xcassets */,
+				F2E63857249A54CD00085B54 /* LaunchScreen.storyboard */,
+				F2E6385A249A54CD00085B54 /* Info.plist */,
+			);
+			path = test.orange;
+			sourceTree = "<group>";
+		};
+		F2E63862249A54CD00085B54 /* test.orangeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2E63863249A54CD00085B54 /* test_latestRates.swift */,
+				F25DB9EB249FA1C800EBFAC2 /* test_HistoricalRates.swift */,
+				F2E63865249A54CD00085B54 /* Info.plist */,
+			);
+			path = test.orangeTests;
+			sourceTree = "<group>";
+		};
+		F2E6386D249A54CD00085B54 /* test.orangeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2E6386E249A54CD00085B54 /* test_orangeUITests.swift */,
+				F2E63870249A54CD00085B54 /* Info.plist */,
+			);
+			path = test.orangeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2E63848249A54CC00085B54 /* test.orange */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E63873249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orange" */;
+			buildPhases = (
+				4102534C56F4A212E7A6CA6C /* [CP] Check Pods Manifest.lock */,
+				F2E63845249A54CC00085B54 /* Sources */,
+				F2E63846249A54CC00085B54 /* Frameworks */,
+				F2E63847249A54CC00085B54 /* Resources */,
+				1E08AA4A71A87A9615615DDE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test.orange;
+			productName = test.orange;
+			productReference = F2E63849249A54CC00085B54 /* test.orange.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2E6385E249A54CD00085B54 /* test.orangeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E63876249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orangeTests" */;
+			buildPhases = (
+				C7C1D3C7F42503E72DFD6D5B /* [CP] Check Pods Manifest.lock */,
+				F2E6385B249A54CD00085B54 /* Sources */,
+				F2E6385C249A54CD00085B54 /* Frameworks */,
+				F2E6385D249A54CD00085B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2E63861249A54CD00085B54 /* PBXTargetDependency */,
+			);
+			name = test.orangeTests;
+			productName = test.orangeTests;
+			productReference = F2E6385F249A54CD00085B54 /* test.orangeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2E63869249A54CD00085B54 /* test.orangeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E63879249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orangeUITests" */;
+			buildPhases = (
+				70F819C47B0F064D2C54FF37 /* [CP] Check Pods Manifest.lock */,
+				F2E63866249A54CD00085B54 /* Sources */,
+				F2E63867249A54CD00085B54 /* Frameworks */,
+				F2E63868249A54CD00085B54 /* Resources */,
+				A7841202731D31AED9BBBAAE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2E6386C249A54CD00085B54 /* PBXTargetDependency */,
+			);
+			name = test.orangeUITests;
+			productName = test.orangeUITests;
+			productReference = F2E6386A249A54CD00085B54 /* test.orangeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2E63841249A54CC00085B54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Alina Nicorescu";
+				TargetAttributes = {
+					F2E63848249A54CC00085B54 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					F2E6385E249A54CD00085B54 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = F2E63848249A54CC00085B54;
+					};
+					F2E63869249A54CD00085B54 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = F2E63848249A54CC00085B54;
+					};
+				};
+			};
+			buildConfigurationList = F2E63844249A54CC00085B54 /* Build configuration list for PBXProject "test.orange" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2E63840249A54CC00085B54;
+			productRefGroup = F2E6384A249A54CC00085B54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2E63848249A54CC00085B54 /* test.orange */,
+				F2E6385E249A54CD00085B54 /* test.orangeTests */,
+				F2E63869249A54CD00085B54 /* test.orangeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2E63847249A54CC00085B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F267E888249A6F0F0075FC76 /* SettingsCell.xib in Resources */,
+				F2E63883249A5A3400085B54 /* HomeCell.xib in Resources */,
+				F2E63859249A54CD00085B54 /* LaunchScreen.storyboard in Resources */,
+				F2E63856249A54CD00085B54 /* Assets.xcassets in Resources */,
+				F2E63854249A54CC00085B54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E6385D249A54CD00085B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E63868249A54CD00085B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E08AA4A71A87A9615615DDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test.orange/Pods-test.orange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test.orange/Pods-test.orange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test.orange/Pods-test.orange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4102534C56F4A212E7A6CA6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test.orange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70F819C47B0F064D2C54FF37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test.orange-test.orangeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7841202731D31AED9BBBAAE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test.orange-test.orangeUITests/Pods-test.orange-test.orangeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-test.orange-test.orangeUITests/Pods-test.orange-test.orangeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-test.orange-test.orangeUITests/Pods-test.orange-test.orangeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C1D3C7F42503E72DFD6D5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-test.orangeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2E63845249A54CC00085B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2EA853C249BE4AF003CDB22 /* Common.swift in Sources */,
+				F2E6388B249A606400085B54 /* ExchangeRatesService.swift in Sources */,
+				F2E63885249A5D1900085B54 /* HomeViewController.swift in Sources */,
+				F2E63882249A5A3400085B54 /* HomeCell.swift in Sources */,
+				F25DB9E7249F7B2100EBFAC2 /* SettingsCellViewModel.swift in Sources */,
+				F267E887249A6F0F0075FC76 /* SettingsCell.swift in Sources */,
+				F2EA853A249BC404003CDB22 /* HistoryRatesChartFactory.swift in Sources */,
+				F267E880249A6C860075FC76 /* Constants.swift in Sources */,
+				F2E6384D249A54CC00085B54 /* AppDelegate.swift in Sources */,
+				F2EA8530249B9425003CDB22 /* HistoricalExchangeRates.swift in Sources */,
+				F267E896249B7B6A0075FC76 /* HomeViewModel.swift in Sources */,
+				F2E6384F249A54CC00085B54 /* SceneDelegate.swift in Sources */,
+				F2E63889249A5D6700085B54 /* HistoryViewController.swift in Sources */,
+				F267E894249B61DA0075FC76 /* ExchangeRates.swift in Sources */,
+				F2E63887249A5D4A00085B54 /* SettingsViewController.swift in Sources */,
+				F2EA8532249B951C003CDB22 /* HistoryViewModel.swift in Sources */,
+				F25DB9EA249F92BB00EBFAC2 /* ExchangeTestServiceMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E6385B249A54CD00085B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E63864249A54CD00085B54 /* test_latestRates.swift in Sources */,
+				F25DB9EC249FA1C800EBFAC2 /* test_HistoricalRates.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2E63866249A54CD00085B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E6386F249A54CD00085B54 /* test_orangeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2E63861249A54CD00085B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2E63848249A54CC00085B54 /* test.orange */;
+			targetProxy = F2E63860249A54CD00085B54 /* PBXContainerItemProxy */;
+		};
+		F2E6386C249A54CD00085B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2E63848249A54CC00085B54 /* test.orange */;
+			targetProxy = F2E6386B249A54CD00085B54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2E63852249A54CC00085B54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E63853249A54CC00085B54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2E63857249A54CD00085B54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E63858249A54CD00085B54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2E63871249A54CD00085B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F2E63872249A54CD00085B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2E63874249A54CD00085B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A15EE6084D59C4643FFAD8 /* Pods-test.orange.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = test.orange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2E63875249A54CD00085B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC8E2610A3DCF3899934925 /* Pods-test.orange.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = test.orange/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orange";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F2E63877249A54CD00085B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F598FF5CF4909F7EC090395A /* Pods-test.orangeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = test.orangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orangeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.orange.app/test.orange";
+			};
+			name = Debug;
+		};
+		F2E63878249A54CD00085B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A208BB1AFE35384270F2C9D5 /* Pods-test.orangeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = test.orangeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orangeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test.orange.app/test.orange";
+			};
+			name = Release;
+		};
+		F2E6387A249A54CD00085B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C7B6552250B4594F8C6AB7 /* Pods-test.orange-test.orangeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = test.orangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orangeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = test.orange;
+			};
+			name = Debug;
+		};
+		F2E6387B249A54CD00085B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0263963F5871661A562288F7 /* Pods-test.orange-test.orangeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = test.orangeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "money.test-orangeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = test.orange;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2E63844249A54CC00085B54 /* Build configuration list for PBXProject "test.orange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E63871249A54CD00085B54 /* Debug */,
+				F2E63872249A54CD00085B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E63873249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orange" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E63874249A54CD00085B54 /* Debug */,
+				F2E63875249A54CD00085B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E63876249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orangeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E63877249A54CD00085B54 /* Debug */,
+				F2E63878249A54CD00085B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E63879249A54CD00085B54 /* Build configuration list for PBXNativeTarget "test.orangeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E6387A249A54CD00085B54 /* Debug */,
+				F2E6387B249A54CD00085B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2E63841249A54CC00085B54 /* Project object */;
+}
